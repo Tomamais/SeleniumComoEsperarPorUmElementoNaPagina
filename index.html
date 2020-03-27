@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Selenium - Como esperar até um elemento estar presente na página
+    </title>
+    <script>
+      function disparaContador() {
+        setTimeout(function() {
+          var novaDiv = document.createElement("div");
+          novaDiv.style.display = "block";
+          novaDiv.id = "escondido";
+          novaDiv.innerHTML = "<h2>Ta dá!</h2>";
+          document.body.appendChild(novaDiv);
+        }, 3000);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Selenium - Como esperar até um elemento estar presente na página</h1>
+    <p>
+      O elemento abaixo aparecerá após 3 segundos do botão abaixo ter sido
+      clicado
+    </p>
+    <button id="disparaContador" onclick="disparaContador()">Vai</button>
+  </body>
+</html>
